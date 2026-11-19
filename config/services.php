@@ -33,6 +33,10 @@ return [
             'bot_user_oauth_token' => env('SLACK_BOT_USER_OAUTH_TOKEN'),
             'channel' => env('SLACK_BOT_USER_DEFAULT_CHANNEL'),
         ],
+        'commands' => [
+            'bot_user_oauth_token' => env('SLACK_COMMANDS_BOT_TOKEN') ?: env('SLACK_BOT_TOKEN'),
+            'signing_secret' => env('SLACK_COMMANDS_SIGNING_SECRET') ?: env('SLACK_SIGNING_SECRET'),
+        ],
     ],
 
 ];
